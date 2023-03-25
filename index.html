@@ -12,7 +12,7 @@
     <script defer src="js/script.js"></script>
   </head>
   <body class="">
-    <header class="relative mx-auto flex max-w-[28rem] items-center border-b border-b-cartwhite px-6 pb-7 pt-5 md:px-0 md:pb-[34px] lg:max-w-[69.375rem] lg:px-6">
+    <header class="relative mx-auto flex max-w-[28rem] items-center border-b border-b-cartwhite px-6 pb-7 pt-5 md:px-0 md:pb-[2.125rem] lg:max-w-[69.375rem] lg:px-6">
       <h1 class="sr-only">Fall Limited Edition Sneakers</h1>
       <nav class="mr-4 flex items-center lg:order-2 lg:mr-0 lg:flex-1">
         <button type="button" class="relative z-40 inline-flex cursor-pointer lg:hidden" aria-expanded="false" aria-controls="menu-list" id="menu-toggle">
@@ -49,7 +49,7 @@
         </button>
 
         <div
-          class="absolute top-20 left-3 right-3 z-40 h-[256px] -translate-y-96 transform rounded-[10px] bg-white drop-shadow-cs transition duration-500 lg:top-24 lg:left-[48rem] lg:w-[360px]"
+          class="absolute top-20 left-3 right-3 z-40 h-[16rem] -translate-y-96 transform rounded-[10px] bg-white drop-shadow-cs transition duration-500 lg:top-24 lg:left-[48rem] lg:w-[22.5rem]"
           id="cart"
         >
           <h2 class="my-6 px-6 font-bold text-dark-blue">Cart</h2>
@@ -65,7 +65,7 @@
       </div>
     </header>
 
-    <main class="grid justify-center lg:mx-auto lg:mt-[90px] lg:max-w-[1015px] lg:grid-cols-2 lg:items-center lg:gap-[7.813rem] lg:px-6 lg:pb-16">
+    <main class="grid justify-center lg:mx-auto lg:mt-[90px] lg:max-w-[63.438rem] lg:grid-cols-2 lg:items-center lg:gap-[7.813rem] lg:px-6 lg:pb-16">
       <section>
         <h2 class="sr-only">Product Image Section</h2>
         <figure class="relative h-[18.75rem] overflow-hidden lg:h-[27.813rem] lg:max-w-[27.813rem] lg:px-0">
@@ -131,12 +131,12 @@
                 <img src="img/image-product-4.jpg" alt="Sneakers product image" class="max-w-ful slide-2 absolute h-auto duration-700 ease-in-out" />
                 <figcaption class="sr-only">Fall Limited Edition Sneakers Product Image</figcaption>
               </figure>
-              <button id="prev" type="button" class="absolute left-[-23px] top-[281px] rounded-full bg-white py-5 px-6">
+              <button id="prev" type="button" class="absolute left-[-1.438rem] top-[17.563rem] rounded-full bg-white py-5 px-6">
                 <span class="sr-only">Previous Button</span>
                 <img src="img/icon-previous.svg" alt="" />
               </button>
 
-              <button id="next" type="button" class="absolute right-[-23px] top-[281px] z-50 rounded-full bg-white py-5 px-6 hover:fill-orange">
+              <button id="next" type="button" class="absolute right-[-1.438rem] top-[17.563rem] z-50 rounded-full bg-white py-5 px-6 hover:fill-orange">
                 <span class="sr-only">Next Button</span>
                 <svg class="icon h-[18px] w-[13px] fill-offwhite">
                   <use xlink:href="img/sprite.svg#icon-next"></use>
@@ -180,22 +180,22 @@
           These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
 
-        <div class="mt-6 flex items-center gap-4 md:max-w-[173px] md:flex-wrap md:gap-5">
+        <div class="mt-6 flex items-center gap-4 md:max-w-[10.813rem] md:flex-wrap md:gap-5">
           <p class="current-price text-2xl font-bold">$125.00</p>
-          <p class="flex-1"><span class="rounded-lg bg-pale-orange px-[8px] pt-[4px] pb-[4px] text-lg font-bold text-orange">50%</span></p>
+          <p class="flex-1"><span class="rounded-lg bg-pale-orange px-[0.5rem] pt-[0.25rem] pb-[0.25rem] text-lg font-bold text-orange">50%</span></p>
           <p class="text-xl font-bold text-grayish-blue">
             <del><span class="sr-only">Previous Price</span>$250.00</del>
           </p>
         </div>
-        <form class="relative mt-6 mb-[88px] flex flex-col gap-4 md:flex-row lg:mb-0">
+        <form class="relative mt-6 mb-[5.5rem] flex flex-col gap-4 md:flex-row lg:mb-0">
           <div class="relative flex">
             <label for="quantity"><span class="sr-only">Quantity</span></label>
-            <input type="number" readonly id="quantity" name="quantity" value="0" class="flex-1 rounded-[10px] bg-offwhite pt-[22px] pb-[18px] text-center md:flex-none" />
-            <button type="button" for="quantity" class="absolute right-4 top-[26px] md:top-[26px]"><span class="sr-only">Increase Quantity</span><img src="img/icon-plus.svg" alt="" /></button>
-            <button type="button" for="quantity" class="absolute left-4 top-[26px] md:top-[26px]"><span class="sr-only">Decrease Quantity</span><img src="img/icon-minus.svg" alt="" /></button>
+            <input type="number" readonly id="quantity" name="quantity" value="0" class="flex-1 rounded-[10px] bg-offwhite pt-[22px] pb-[1.125rem] text-center md:flex-none" />
+            <button type="button" for="quantity" class="absolute right-4 top-[1.625rem] md:top-[1.625rem]"><span class="sr-only">Increase Quantity</span><img src="img/icon-plus.svg" alt="" /></button>
+            <button type="button" for="quantity" class="absolute left-4 top-[1.625rem] md:top-[1.625rem]"><span class="sr-only">Decrease Quantity</span><img src="img/icon-minus.svg" alt="" /></button>
           </div>
 
-          <button type="submit" id="Add-to-cart" class="inline-flex items-center justify-center gap-4 rounded-[10px] bg-orange py-[18px] font-bold text-white hover:bg-[#FFAB6A] md:flex-1">
+          <button type="submit" id="Add-to-cart" class="inline-flex items-center justify-center gap-4 rounded-[10px] bg-orange py-[1.125rem] font-bold text-white hover:bg-[#FFAB6A] md:flex-1">
             <span class="sr-only">Add to cart</span>
             <img src="img/icon-cart-white.svg" alt="" /> Add to cart
           </button>
