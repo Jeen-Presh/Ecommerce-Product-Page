@@ -163,6 +163,11 @@ addToCartBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (Number(quantityInput.value) === 0) return;
+
+  // disable the "Add to Cart" button and change the text
+  addToCartBtn.disabled = true;
+  addToCartBtn.textContent = "Added to Cart";
+
   cardCount.classList.replace("hidden", "inline-block");
   if (Number(quantityInput.value) <= 9) {
     cardCount.textContent = quantityInput.value;
@@ -225,6 +230,10 @@ addToCartBtn.addEventListener("click", (e) => {
     cardCount.textContent = "";
     cardCount.classList.replace("inline-block", "hidden");
     cartText.classList.remove("hidden");
+
+    // enable the "Add to Cart" button and reset the text
+    addToCartBtn.disabled = false;
+    addToCartBtn.textContent = "Add to Cart";
   };
   deletBtn.addEventListener("click", deleteItem);
 });
@@ -246,3 +255,5 @@ const closeLightBoxGallery = function () {
 };
 
 lightBoxBtn.addEventListener("click", closeLightBoxGallery);
+
+const cartitems = cartMenu.lastElementChild;
