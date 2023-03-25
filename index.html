@@ -5,65 +5,201 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
     <title>Frontend Mentor | E-commerce product page</title>
+    <script src="https://kit.fontawesome.com/ee418156cf.js" crossorigin="anonymous"></script>
+    <script defer src="js/script.js"></script>
   </head>
-  <body>
-    <header>
-      <nav>
-        <button></button>
-        <ul>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+  <body class="">
+    <header class="mx-auto flex max-w-[28rem] items-center border-b border-b-cartwhite px-6 pb-7 pt-5 md:px-0 md:pb-[34px] lg:max-w-[69.375rem] lg:px-6">
+      <h1 class="sr-only">Fall Limited Edition Sneakers</h1>
+      <nav class="mr-4 flex items-center lg:order-2 lg:mr-0 lg:flex-1">
+        <button type="button" class="relative z-40 inline-flex cursor-pointer lg:hidden" aria-expanded="false" aria-controls="menu-list" id="menu-toggle">
+          <span class="sr-only">Menu Navigation</span>
+          <img src="img/icon-menu.svg" alt="" class="pt-1" id="open-icon" />
+          <img src="img/icon-close.svg" alt="" class="hidden" id="close-icon" />
+        </button>
+        <ul class="hidden lg:flex lg:gap-8" id="menu-list">
+          <li>
+            <a class="menu-icon" href="#">Collections</a>
+          </li>
+          <li>
+            <a class="menu-icon" href="#">Men</a>
+          </li>
+          <li>
+            <a class="menu-icon" href="#">Women</a>
+          </li>
+          <li>
+            <a class="menu-icon" href="#">About</a>
+          </li>
+          <li>
+            <a class="menu-icon" href="#">Contact</a>
+          </li>
         </ul>
       </nav>
-      <a href="index.html"><img src="img/logo.svg" alt="E-commerce logo sneakers" /></a>
 
-      <button>
-        <img src="img/icon-cart.svg" alt="" />
-        <span class="card-count hidden">0</span>
-      </button>
-      <ul class="hidden">
-        <h2>Cart</h2>
-      </ul>
+      <a href="index.html" class="flex-1 lg:order-1 lg:mr-14 lg:flex-none"><img src="img/logo.svg" alt="E-com merce logo sneakers" /></a>
 
-      <img src="img/image-avatar.png" alt="User profile picture" />
+      <div class="flex items-center gap-5 lg:order-3">
+        <button id="cart-toggle" aria-expanded="false" aria-controls="cart" class="relative">
+          <span class="sr-only">Cart Menu</span>
+          <img src="img/icon-cart.svg" class="" alt="" />
+          <span class="card-count absolute top-[-8px] right-[-6px] hidden rounded-[10px] bg-orange px-[5px] text-[0.625rem] font-bold text-white">0</span>
+        </button>
+
+        <div class="absolute top-[76px] right-[8px] z-50 h-[256px] w-[360px] -translate-y-96 transform rounded-[10px] bg-white drop-shadow-cs transition duration-500 md:right-[89px]" id="cart">
+          <h2 class="my-6 px-6 font-bold text-dark-blue">Cart</h2>
+          <ul class="cart__menu space-y-6 border-t border-bwhite px-6">
+            <p class="cart__text mt-[4.813rem] text-center font-bold text-dark-grayblue">Your cart is empty</p>
+          </ul>
+        </div>
+
+        <a href="#" class="">
+          <span class="sr-only">User Profile</span>
+          <img src="img/image-avatar.png" alt="User profile picture" class="w-[24px] rounded-full object-cover hover:border-2 hover:border-orange md:w-[50px]" />
+        </a>
+      </div>
     </header>
 
-    <main>
+    <main class="grid justify-center lg:mx-auto lg:mt-[90px] lg:max-w-[1015px] lg:grid-cols-2 lg:items-center lg:gap-[7.813rem] lg:px-6 lg:pb-16">
       <section>
-        <img src="img/image-product-1.jpg" alt="" />
-        <div>
-          <img src="img/image-product-1-thumbnail.jpg" alt="" />
-          <img src="img/image-product-2-thumbnail.jpg" alt="" />
-          <img src="img/image-product-3-thumbnail.jpg" alt="" />
-          <img src="img/image-product-4-thumbnail.jpg" alt="" />
+        <h2 class="sr-only">Product Image Section</h2>
+        <figure class="relative h-[18.75rem] overflow-hidden lg:h-[27.813rem] lg:max-w-[27.813rem] lg:px-0">
+          <div class="slide absolute top-0 w-full transition duration-1000 md:max-h-[445px]">
+            <img src="img/image-product-1.jpg" alt="" data-src="img/image-product-1.jpg" class="h-[18.75rem] w-full object-cover lg:h-[27.813rem] lg:rounded-[15px]" />
+          </div>
+          <div class="slide absolute top-0 w-full transition duration-1000">
+            <img src="img/image-product-2.jpg" alt="" class="h-[18.75rem] w-full object-cover lg:h-[27.813rem] lg:rounded-[15px]" />
+          </div>
+          <div class="slide absolute top-0 w-full transition duration-1000">
+            <img src="img/image-product-3.jpg" alt="" class="h-[18.75rem] w-full object-cover lg:h-[27.813rem] lg:rounded-[15px]" />
+          </div>
+          <div class="slide absolute top-0 w-full transition duration-1000">
+            <img src="img/image-product-4.jpg" alt="" class="h-[18.75rem] w-full object-cover lg:h-[27.813rem] lg:rounded-[15px]" />
+          </div>
+
+          <button type="button" id="prev-button" class="absolute top-32 left-2 inline-flex items-center rounded-full bg-white py-1.2 px-1.1 lg:hidden">
+            <span class="sr-only">Previous Button</span>
+            <img src="img/icon-previous.svg" alt="" class="" />
+          </button>
+          <button type="button" id="next-button" class="absolute top-32 right-2 inline-flex items-center rounded-full bg-white py-1.2 px-1.1 lg:hidden">
+            <span class="sr-only">Next Button</span>
+            <img src="img/icon-next.svg" alt="" />
+          </button>
+          <figcaption class="sr-only">Product images</figcaption>
+        </figure>
+
+        <figure class="relative hidden md:mt-8 md:mb-6 md:flex md:gap-[1.938rem]">
+          <a href="#" class="relative">
+            <span class="sr-only">Product Thumbnail 1</span>
+            <img src="img/image-product-1-thumbnail.jpg" class="max-w-[5.5rem] rounded-[10px] border-2 border-orange" alt="Sneakers product image" />
+            <div class="absolute inset-0 bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+          </a>
+          <a href="#" class="relative">
+            <span class="sr-only">Product Thumbnail 2</span>
+            <img src="img/image-product-2-thumbnail.jpg" class="max-w-[5.5rem] rounded-[10px]" alt="Sneakers product image" />
+            <div class="absolute inset-0 bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+          </a>
+          <a href="#" class="relative">
+            <span class="sr-only">Product Thumbnail 3</span>
+            <img src="img/image-product-3-thumbnail.jpg" class="max-w-[5.5rem] rounded-[10px]" alt="Sneakers product image" />
+            <div class="absolute inset-0 bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+          </a>
+          <a href="#" class="relative">
+            <span class="sr-only">Product Thumbnail 4</span>
+            <img src="img/image-product-4-thumbnail.jpg" class="max-w-[5.5rem] rounded-[10px]" alt="Sneakers product image" />
+            <div class="absolute inset-0 bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+          </a>
+          <figcaption class="sr-only">Fall Limited Edition Sneakers Thumbnail</figcaption>
+        </figure>
+
+        <div class="lightbox-gallery hidden overflow-auto lg:fixed lg:top-0 lg:left-0 lg:z-50 lg:h-full lg:w-full lg:items-center lg:justify-center lg:bg-bgblack">
+          <div class="relative grid max-w-[34.375rem] justify-center">
+            <button type="button" class="mb-6 justify-self-end" id="lightbox-closebtn">
+              <span class="sr-only">Close Button</span>
+              <img src="img/icon-close.svg" alt="" />
+            </button>
+            <div>
+              <figure class="product-images relative h-[34.375rem] w-[34.375rem] overflow-hidden md:rounded-[15px]">
+                <img src="img/image-product-1.jpg" alt="Sneakers product image" class="slide-2 absolute h-auto max-w-full duration-700 ease-in-out" id="default-image" />
+                <img src="img/image-product-2.jpg" alt="Sneakers product image" class="max-w-ful slide-2 absolute h-auto duration-700 ease-in-out" />
+                <img src="img/image-product-3.jpg" alt="Sneakers product image" class="max-w-ful slide-2 absolute h-auto duration-700 ease-in-out" />
+                <img src="img/image-product-4.jpg" alt="Sneakers product image" class="max-w-ful slide-2 absolute h-auto duration-700 ease-in-out" />
+                <figcaption class="sr-only">Fall Limited Edition Sneakers Product Image</figcaption>
+              </figure>
+              <button id="prev" type="button" class="absolute left-[-23px] top-[281px] rounded-full bg-white py-5 px-6">
+                <span class="sr-only">Previous Button</span>
+                <img src="img/icon-previous.svg" alt="" />
+              </button>
+
+              <button id="next" type="button" class="absolute right-[-23px] top-[281px] z-50 rounded-full bg-white py-5 px-6 hover:fill-orange">
+                <span class="sr-only">Next Button</span>
+                <svg class="icon h-[18px] w-[13px] fill-offwhite">
+                  <use xlink:href="img/sprite.svg#icon-next"></use>
+                </svg>
+              </button>
+            </div>
+
+            <figure class="product-thumbnails mt-10 flex max-w-[27.813rem] gap-8 justify-self-center">
+              <a href="#" class="relative">
+                <span class="sr-only">Product Thumbnail 1</span>
+                <img src="img/image-product-1-thumbnail.jpg" alt="Product Thumbnails" class="thumbnails max-w-[5.5rem] rounded-[10px] border-2 border-orange" />
+                <div class="absolute inset-0 rounded-[10px] bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+              </a>
+
+              <a href="#" class="relative">
+                <span class="sr-only">Product Thumbnail 2</span>
+                <img src="img/image-product-2-thumbnail.jpg" alt="Product Thumbnails" class="thumbnails w-[5.5rem] rounded-[10px]" />
+                <div class="absolute inset-0 rounded-[10px] bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+              </a>
+
+              <a href="#" class="relative">
+                <span class="sr-only">Product Thumbnail 3</span>
+                <img src="img/image-product-3-thumbnail.jpg" alt="Product Thumbnails" class="thumbnails w-[5.5rem] rounded-[10px]" />
+                <div class="absolute inset-0 rounded-[10px] bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+              </a>
+              <a href="#" class="relative">
+                <span class="sr-only">Product Thumbnail 4</span>
+                <img src="img/image-product-4-thumbnail.jpg" alt="Product Thumbnails" class="thumbnails w-[5.5rem] rounded-[10px]" />
+                <div class="absolute inset-0 rounded-[10px] bg-twhite opacity-0 transition-opacity hover:opacity-100"></div>
+              </a>
+              <figcaption class="sr-only">Fall Limited Edition Sneakers Product Thumbnail Image</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
-      <section>
-        <h2>Sneaker Company</h2>
-        <h3>Fall Limited Edition Sneakers</h3>
-        <h3>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</h3>
-        <div>
-          <p>$125.00</p>
-          <p>50%</p>
-          <p>
+
+      <section class="mx-auto max-w-[31.25rem] items-center px-8 md:mx-0 md:px-0 cs:px-0">
+        <h2 class="mt-6 text-xs font-bold uppercase text-orange md:mt-0">Sneaker Company</h2>
+        <h3 class="mt-4 text-2xl font-bold">Fall Limited Edition Sneakers</h3>
+        <p class="mt-4 max-w-md text-sm font-normal text-dark-grayblue">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+
+        <div class="mt-6 flex items-center gap-4 md:max-w-[173px] md:flex-wrap md:gap-5">
+          <p class="current-price text-2xl font-bold">$125.00</p>
+          <p class="flex-1"><span class="rounded-lg bg-pale-orange px-[8px] pt-[4px] pb-[4px] text-lg font-bold text-orange">50%</span></p>
+          <p class="text-xl font-bold text-grayish-blue">
             <del><span class="sr-only">Previous Price</span>$250.00</del>
           </p>
         </div>
-        <form>
-          <div>
+        <form class="relative mt-6 mb-[88px] flex flex-col gap-4 md:flex-row lg:mb-0">
+          <div class="relative flex">
             <label for="quantity"><span class="sr-only">Quantity</span></label>
-            <input type="number" id="quantity" name="quantity" value="0" />
-            <button type="button" for="quantity"><span class="sr-only">Increase Quantity</span><img src="img/icon-plus.svg" alt="" /></button>
-            <button type="button" for="quantity"><span class="sr-only">Decrease Quantity</span><img src="img/icon-minus.svg" alt="" /></button>
+            <input type="number" readonly id="quantity" name="quantity" value="0" class="flex-1 rounded-[10px] bg-offwhite pt-[22px] pb-[18px] text-center md:flex-none" />
+            <button type="button" for="quantity" class="absolute right-4 top-[26px] md:top-[26px]"><span class="sr-only">Increase Quantity</span><img src="img/icon-plus.svg" alt="" /></button>
+            <button type="button" for="quantity" class="absolute left-4 top-[26px] md:top-[26px]"><span class="sr-only">Decrease Quantity</span><img src="img/icon-minus.svg" alt="" /></button>
           </div>
-          <button type="submit"><img src="img/icon-cart.svg" alt="" /> Add to cart</button>
+
+          <button type="submit" id="Add-to-cart" class="inline-flex items-center justify-center gap-4 rounded-[10px] bg-orange py-[18px] font-bold text-white hover:bg-[#FFAB6A] md:flex-1">
+            <span class="sr-only">Add to cart</span>
+            <img src="img/icon-cart-white.svg" alt="" /> Add to cart
+          </button>
         </form>
       </section>
     </main>
+
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>

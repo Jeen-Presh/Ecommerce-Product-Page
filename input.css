@@ -2,3 +2,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.menu-list {
+  @apply fixed left-0 top-0 z-30 block min-h-screen w-[66%] space-y-5 overflow-auto bg-white pt-24 pl-6 transition duration-200;
+}
+
+.overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #000000;
+  opacity: 0.75;
+  z-index: 4;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.menu-icon {
+  @apply inline-block text-4xl font-bold text-dark-blue md:relative md:text-xl md:font-normal md:text-dark-grayblue md:after:absolute md:after:-bottom-[46px] md:after:left-0 md:after:h-[4px] md:after:w-0 md:after:bg-orange md:after:duration-500 md:hover:after:w-full;
+}
+
+.icon {
+  fill: orange;
+}
+
+.cart__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.cart__div {
+  display: flex;
+  flex-direction: flex-column;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 0.875rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+}
+
+.btn--primary {
+  @apply bg-orange text-white;
+}
+
+.product-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.cart__lsit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__price {
+  font-weight: 400;
+  color: #69707d;
+}
+
+.subtext {
+  font-weight: 700;
+  color: #1d2026;
+}
